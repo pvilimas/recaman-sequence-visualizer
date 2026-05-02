@@ -23,7 +23,9 @@ void init() {
 	// debug_print_sequence();
 	SetTraceLogLevel(LOG_WARNING);
 	SetTargetFPS(60);
+	SetConfigFlags(FLAG_VSYNC_HINT | FLAG_MSAA_4X_HINT | FLAG_WINDOW_HIGHDPI);
 	InitWindow(APP.window_size.x, APP.window_size.y, APP.window_title);
+	ToggleBorderlessWindowed();
 }
 
 void populate_sequence() {
